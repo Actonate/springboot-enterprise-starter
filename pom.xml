@@ -122,6 +122,14 @@
 			<version>1.2.5</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.rollbar/rollbar-spring-boot-webmvc -->
+		<dependency>
+			<groupId>com.rollbar</groupId>
+			<artifactId>rollbar-spring-boot-webmvc</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>io.sentry</groupId>
 			<artifactId>sentry-logback</artifactId>
