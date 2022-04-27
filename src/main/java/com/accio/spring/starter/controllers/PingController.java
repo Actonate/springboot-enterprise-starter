@@ -13,13 +13,16 @@ import java.util.HashMap;
 
 @RestController
 public class PingController {
+    /**
+     * Rollbar instance.
+     */
     @Autowired
     private Rollbar rollbar;
 
     /**
      * Logger instance.
      */
-    private Logger logger = LoggerFactory.getLogger(PingController.class);
+    private final Logger logger = LoggerFactory.getLogger(PingController.class);
 
     /**
      * Ping to check server is running or not.
@@ -32,15 +35,12 @@ public class PingController {
         // Sends a debug message to your Spring project on Rollbar
         rollbar.debug("Here is some debug message");
 
-        /**
-         * Rollbar usage example
-         */
         Exception e = new Exception("Rollbar test error");
         rollbar.error(e);
-        HashMap<String,Object> map=new HashMap<String, Object>();
-        map.put("Id","123");
-        map.put("User Name","John Doe");
-        map.put("Email","john@doe.com");
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("Id", "123");
+        map.put("User Name", "John Doe");
+        map.put("Email", "john@doe.com");
         rollbar.log(e, map);
 
 
