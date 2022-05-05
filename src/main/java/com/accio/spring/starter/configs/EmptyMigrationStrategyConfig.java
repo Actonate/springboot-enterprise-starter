@@ -8,6 +8,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class EmptyMigrationStrategyConfig {
 
+    /**
+     * For disabled flyway migration on application startup.
+     *
+     *
+     *
+     * @return Flyway
+     */
     @Bean
     public FlywayMigrationStrategy flywayMigrationStrategy() {
         return flyway -> {
